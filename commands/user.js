@@ -6,8 +6,8 @@ module.exports = (bot, channel, message) => {
         return util.error(channel, "You must be in a guild text channel to use this command");
     }
 
-    let user = message.mentions.users.first();
-    if (!user) user = bot.user;
+    let mention = message.mentions.users.first();
+    let user = mention ? mention : message.author;
     let member = message.guild.members.get(user.id);
     let embed = {
         "color": util.roleColour(member),
