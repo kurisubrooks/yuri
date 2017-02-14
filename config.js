@@ -15,7 +15,7 @@ module.exports = {
         { "command": "eval" },
         { "command": "quote", "alias": [">", "q"] },
         { "command": "server" },
-        { "command": "user", "alias": ["userinfo", "ui"]  },
+        { "command": "user", "alias": ["userinfo", "ui"] },
         { "command": "shib" },
         { "command": "stats" },
         { "command": "translate", "alias": ["t"] },
