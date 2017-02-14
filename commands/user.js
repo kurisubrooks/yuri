@@ -2,7 +2,7 @@ const util = require("../utilities");
 
 module.exports = (bot, channel, message) => {
     let user = message.mentions.users.first();
-    if(user === undefined) return;
+    if (user === undefined) return;
     let member = message.guild.members.get(user.id);
     let embed = {
         "color": util.roleColour(member),
@@ -20,12 +20,12 @@ module.exports = (bot, channel, message) => {
             },
             {
                 "name": "Joined Guild",
-                "value": moment.utc(member.joinedTimestamp).format('MMM Do YYYY'),
+                "value": moment.utc(member.joinedTimestamp).format("MMM Do YYYY"),
                 "inline": true
             },
             {
                 "name": "Playing",
-                "value": user.presence.game ? user.presence.game.name : 'None',
+                "value": user.presence.game ? user.presence.game.name : "None",
                 "inline": true
             },
             {
@@ -39,7 +39,7 @@ module.exports = (bot, channel, message) => {
             },
             {
                 "name": "Roles",
-                "value": member.roles.map(roles => `<@&${roles.id}>`).join(', ')
+                "value": member.roles.map(roles => `<@&${roles.id}>`).join(", ")
             }
         ]
     };
