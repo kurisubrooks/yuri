@@ -2,9 +2,12 @@ const util = require("../utilities");
 const moment = require("moment");
 
 module.exports = (bot, channel, message) => {
-    if (message.channel.type !== "text") return util.error(channel, "You must be in a guild text channel to use this command");
+    if (message.channel.type !== "text") {
+        return util.error(channel, "You must be in a guild text channel to use this command");
+    }
+
     let user = message.mentions.users.first();
-    if (user === undefined) return;
+    if (!user) user = bot.user;
     let member = message.guild.members.get(user.id);
     let embed = {
         "color": util.roleColour(member),
@@ -31,17 +34,14 @@ module.exports = (bot, channel, message) => {
                 "inline": true
             },
             {
-                "name": "Bot?",
-                "value": user.bot,
+                "name": "Bot",
+                "value": user.bot ? "Yes" : "No",
                 "inline": true
             },
             {
-                "name": "Avatar URL",
-                "value": user.avatarURL
-            },
-            {
                 "name": "Roles",
-                "value": member.roles.map(roles => `<@&${roles.id}>`).join(", ")
+                "value": member.roles.map(roles => `<@&${roles.id}>`).join(", "),
+                "inline": true
             }
         ]
     };
