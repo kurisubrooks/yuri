@@ -35,7 +35,7 @@ bot.on("ready", () => util.onReady(bot));
 bot.on("error", err => console.error(err));
 bot.on("message", message => {
     let channel = message.channel;
-    let author = message.author;
+    let user = message.author;
     let text = message.cleanContent;
     let args = text.split(" ");
     let attachments = false;
@@ -44,8 +44,9 @@ bot.on("message", message => {
 
     message.attachments.forEach(() => { attachments = true; });
     message.image = attachments && text.length < 1 ? 1 : 0;
+    user.nickname = message.member ? message.member.displayName : message.author.username;
 
-    if (bot.user.id !== author.id) return false;
+    if (bot.user.id !== user.id) return false;
     if (text.length < 1 && !attachments) return false;
     if (attachments) text += message.image ? "<file>" : " <file>";
 
