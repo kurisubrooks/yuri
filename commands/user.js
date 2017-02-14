@@ -1,4 +1,5 @@
 const util = require("../utilities");
+const moment = require("moment");
 
 module.exports = (bot, channel, message) => {
     let user = message.mentions.users.first();
