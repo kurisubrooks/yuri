@@ -2,6 +2,7 @@ const util = require("../utilities");
 const moment = require("moment");
 
 module.exports = (bot, channel, message) => {
+    if (message.channel.type !== "text") return util.error(channel, "You must be in a guild text channel to use this command");
     let user = message.mentions.users.first();
     if (user === undefined) return;
     let member = message.guild.members.get(user.id);
