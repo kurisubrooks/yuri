@@ -11,6 +11,7 @@ module.exports = {
     },
 
     "commands": [
+        { "command": "bot" },
         { "command": "embed", "alias": ["e"] },
         { "command": "eval" },
         { "command": "quote", "alias": [">", "q"] },
