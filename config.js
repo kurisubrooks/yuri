@@ -20,7 +20,8 @@ module.exports = {
         { "command": "shib" },
         { "command": "stats" },
         { "command": "translate", "alias": ["t"] },
-        { "command": "weather", "alias": ["w"] }
+        { "command": "weather", "alias": ["w"] },
+        { "command": "ping", "alias": ["p"] }
     ],
 
     "reactions": {
