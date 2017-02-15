@@ -29,7 +29,7 @@
         "func-names": "error",
         "func-style": [ "error", "declaration", { "allowArrowFunctions": true } ],
         "handle-callback-err": "error",
-        "id-length": [ "error", { "exceptions": [ "_", "a", "b" ] } ],
+        "id-length": [ "error", { "exceptions": [ "$", "_", "a", "b" ] } ],
         "indent": [ "error", 4, { "SwitchCase": 1 } ],
         "key-spacing": "error",
         "keyword-spacing": [ "error",
