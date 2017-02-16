@@ -27,5 +27,5 @@ npm start
 If you wish to run Yuri under Production, you can start it with pm2 by using
 
 ```bash
-pm2 start index --name "yuri" --node-args="--harmony" -- --color
+pm2 start index.js --name "yuri" --node-args="--harmony" -- --color
 ```
