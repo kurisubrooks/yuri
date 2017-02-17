@@ -50,7 +50,7 @@ bot.on("message", message => {
     if (text.length < 1 && !attachments) return false;
     if (attachments) text += message.image ? "<file>" : " <file>";
 
-    console.log(`Kurisu: ${text}`);
+    console.log(`${bot.user.username}: ${text}`);
 
     // Reactions
     for (const value of args) {
