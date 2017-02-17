@@ -31,7 +31,7 @@ for (const item of config.commands) {
 }
 
 bot.login(keychain.token);
-bot.on("ready", () => util.onReady(bot));
+bot.once("ready", () => util.onReady(bot));
 bot.on("error", err => console.error(err));
 bot.on("message", message => {
     let channel = message.channel;
