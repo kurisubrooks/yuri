@@ -21,7 +21,8 @@ module.exports = {
         { "command": "stats" },
         { "command": "translate", "alias": ["t"] },
         { "command": "weather", "alias": ["w"] },
-        { "command": "ping", "alias": ["p"] }
+        { "command": "ping", "alias": ["p"] },
+        { "command": "cats" }
     ],
 
     "reactions": {
