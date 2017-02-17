@@ -12,6 +12,7 @@ module.exports = {
 
     "commands": [
         { "command": "bot" },
+        { "command": "cats" },
         { "command": "embed", "alias": ["e"] },
         { "command": "eval" },
         { "command": "quote", "alias": [">", "q"] },
@@ -21,8 +22,7 @@ module.exports = {
         { "command": "stats" },
         { "command": "translate", "alias": ["t"] },
         { "command": "weather", "alias": ["w"] },
-        { "command": "ping", "alias": ["p"] },
-        { "command": "cats" }
+        { "command": "ping", "alias": ["p"] }
     ],
 
     "reactions": {
