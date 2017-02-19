@@ -27,7 +27,7 @@ module.exports = {
 
     "reactions": {
         "lenny": "( ͡° ͜ʖ ͡°)",
-        "shrug": "¯\\\_(ツ)\_/¯",
+        "shrug": "¯\\\_(ツ)\_/¯", // eslint-disable-line no-useless-escape
         "concerned": "ಠ_ಠ",
         "gimme": "༼ つ ◕_◕ ༽つ",
         "sparkles": "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧",
