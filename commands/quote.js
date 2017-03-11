@@ -42,5 +42,7 @@ module.exports = async(bot, channel, message, args) => {
             }
         }
         return message.edit(response, { embed: embed });
-    } catch(error) { return message.edit(`Error while running command: \`${error}\``); }
+    } catch(error) { 
+        return message.edit(`Error while running command: \`${error}\``); 
+    }
 };
